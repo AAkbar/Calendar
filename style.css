@@ -1,0 +1,116 @@
+/* GLOBAL STYLES GOES HERE */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    perspective: 800px;
+}
+.wrapper{
+    background-color: brown;
+    width: 400px;
+    height: 350px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 30px grey;
+    transform:  translateY(50px);
+}
+
+/************************************************/
+/*            HEAD OF MY CALENDAR               */
+/************************************************/
+
+.head{
+    display: flex;
+    text-align: center
+}
+.head span{
+    flex: 1;
+}
+.button::selection{
+    background: none;
+}
+.head span:nth-of-type(odd){
+    color: white;
+    font-size: 3em;
+    height: 50px;
+}
+.head span:nth-of-type(2){
+    font-size: 2em;
+    font-weight: 900;
+    flex: 2;
+    line-height: 50px;
+}
+.head span:nth-of-type(2)::before{
+    content: " ";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+.button{
+    font-size: 2em;
+    font-weight: 900;
+    background: grey;
+    cursor: pointer;
+}
+.button:active{
+    background: yellow;
+}
+
+/****************************************
+            BODY OF CALENDAR
+****************************************/
+#wrap{
+    min-height: 180px;
+}
+table{
+    min-height: 175px; 
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+tr{
+    width: 100%;
+}
+td:nth-of-type(1n){
+    cursor: pointer;
+    border: 1px solid red;
+}
+tr:first-child{
+    background-color: darkkhaki;
+}
+td:hover{
+    background: white;
+}
+tr, td{
+    width: 80px;
+    margin: 10px;
+}
+.btnContainer{
+    width: 300px;
+    margin: 10px auto;
+    display: flex;
+}
+.btnContainer .button{
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center
+}
+#rst{
+    display: inline-block;
+    width: 50%;
+    font-size: 1.2em;
+    margin: 5px auto;
+    cursor: pointer;
+    border: 5px inset black;
+    border-radius: 10px;
+}
+#rst:active{
+    box-shadow: 0px 0px 30px 5px inset black;
+}
